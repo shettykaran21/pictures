@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 1.6rem;
   background-color: #282c34;
-  min-height: 100vh;
+  color: #f6f4f4;
+}
+
+/* SearchBar */
+.search-bar {
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 4rem;
+  margin: 2rem 0 4rem 0;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar__label {
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar__input {
+  font-size: 1.6rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+/* ----ImageList---- */
+.image-list {
+  margin: 0 auto;
+  max-width: 130rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmaX(25rem, 1fr));
+  grid-auto-rows: 1rem;
+}
+
+.image-list__img {
+  width: 25rem;
 }
